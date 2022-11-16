@@ -1,0 +1,57 @@
+---
+title: "Exemple"
+author: Daffy Duck
+---
+
+Un exemple `observable`: mettez du texte plus bas 👇
+
+```{ojs}
+//| echo: false
+message
+```
+
+
+```{ojs}
+data
+```
+
+```{python}
+#| echo: false
+import pandas as pd
+data = pd.DataFrame([0,1])
+ojs_define(data = data)
+```
+
+
+
+```{ojs}
+viewof x = Inputs.range([0,1])
+```
+
+```{ojs}
+viewof message = Inputs.text({placeholder: "Say hello"})
+```
+
+
+```{ojs}
+viewof color = Inputs.select(["red", "orange", "yellow", "green", "blue", "violet"], {value: "green"})
+```
+
+```{ojs}
+viewof bill_length_min = Inputs.range(
+  [32, 50], 
+  {value: 35, step: 1, label: "Bill length (min):"}
+)
+viewof islands = Inputs.checkbox(
+  ["Torgersen", "Biscoe", "Dream"], 
+  { value: ["Torgersen", "Biscoe"], 
+    label: "Islands:"
+  }
+)
+```
+
+
+```{ojs}
+d3 = require("d3@7")
+topojson = require("topojson")
+```
